@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply bg-white text-charcoal antialiased;
+    font-family: var(--font-inter);
+  }
+
+  /* Typography Scale */
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight;
+    @apply text-charcoal;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight;
+    @apply text-charcoal;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold leading-snug tracking-tight;
+    @apply text-charcoal;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-semibold leading-snug;
+    @apply text-charcoal;
+  }
+
+  p {
+    @apply text-base md:text-lg leading-relaxed;
+    @apply text-charcoal;
+  }
+
+  .text-small {
+    @apply text-sm md:text-base leading-relaxed;
+    @apply text-charcoal;
+  }
+
+  /* Clear vertical rhythm */
+  section {
+    @apply py-section;
+  }
+
+  .section-large {
+    @apply py-section-lg;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Link transitions */
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  /* Button Styles */
+  .btn {
+    @apply inline-flex items-center justify-center;
+    @apply px-6 py-3 md:px-8 md:py-4;
+    @apply rounded-full;
+    @apply font-semibold text-base md:text-lg;
+    @apply transition-all duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    background: linear-gradient(to bottom, #8B1538, #6B0F2A);
+    @apply text-white;
+    @apply hover:opacity-90;
+    @apply focus:ring-primary;
+    @apply shadow-sm hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-primary;
+    @apply border-2 border-primary;
+    @apply hover:bg-primary hover:text-white;
+    @apply focus:ring-primary;
+  }
+
+  .btn-secondary-white {
+    @apply bg-transparent text-white;
+    @apply border-2 border-white;
+    @apply hover:bg-white hover:text-primary;
+    @apply focus:ring-white;
+  }
+
+  /* Card Styles */
+  .card {
+    background: linear-gradient(to bottom, #ffffff, #fafafa);
+    @apply rounded-card;
+    @apply shadow-card;
+    @apply p-6 md:p-8;
+    @apply transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  /* Image Placeholder */
+  .image-placeholder {
+    @apply bg-gray-100 rounded-image;
+    @apply flex items-center justify-center;
+    @apply text-gray-400 text-sm;
+    @apply overflow-hidden;
+    @apply transition-opacity duration-300;
+  }
+
+  /* Section Header */
+  .section-header {
+    @apply text-center max-w-3xl mx-auto mb-12 md:mb-16;
+  }
+
+  .section-header h2 {
+    @apply mb-4;
+  }
+
+  .section-header p {
+    @apply text-lg md:text-xl text-charcoal-light;
+  }
+
+  /* Background Sections */
+  .bg-section {
+    background: linear-gradient(to bottom, #f9fafb, #f3f4f6);
+  }
+
+  .bg-section-alt {
+    background: linear-gradient(to bottom, #FEE2E2, #FDD5D5);
+  }
+
+  /* Section Animation */
+  .section-animate {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Full-width section container */
+  .section-container {
+    @apply w-screen;
+    @apply py-section md:py-section-lg;
+    @apply px-4 sm:px-6 lg:px-8;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  .section-container-inner {
+    @apply mx-auto max-w-7xl;
+  }
+}
+
