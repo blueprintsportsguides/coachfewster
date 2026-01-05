@@ -1,6 +1,7 @@
 import SectionHeader from "@/components/SectionHeader";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import ContactForm from "@/components/ContactForm";
+import Image from "next/image";
 
 export default function Contact() {
   return (
@@ -51,11 +52,14 @@ export default function Contact() {
 
           {/* Image Side */}
           <div className="order-first lg:order-last">
-            <ImagePlaceholder
-              label="Contact page image placeholder"
-              aspectRatio="square"
-              className="w-full"
-            />
+            <div className="relative w-full aspect-square rounded-image overflow-hidden">
+              <Image
+                src="/contact-page.jpg"
+                alt="Contact page"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
         </div>
