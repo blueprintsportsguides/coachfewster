@@ -117,7 +117,8 @@ export default function Home() {
           ctaHref="/contact"
           variant="primary"
           showImage={true}
-          imageLabel="CTA banner background image placeholder"
+          imageLabel="CTA banner background"
+          imagePath="/cta-banner-background.jpeg"
         />
       </section>
     </>

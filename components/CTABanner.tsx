@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import ImagePlaceholder from "./ImagePlaceholder";
+import Image from "next/image";
 
 interface CTABannerProps {
   headline: string;
@@ -11,6 +12,7 @@ interface CTABannerProps {
   variant?: "primary" | "secondary";
   showImage?: boolean;
   imageLabel?: string;
+  imagePath?: string;
   className?: string;
 }
 
@@ -28,6 +30,7 @@ export default function CTABanner({
   variant = "primary",
   showImage = false,
   imageLabel = "CTA banner image placeholder",
+  imagePath,
   className = "",
 }: CTABannerProps) {
   return (
@@ -35,11 +38,20 @@ export default function CTABanner({
       <div className="relative z-10 bg-gradient-to-b from-primary to-primary-dark p-8 md:p-12 lg:p-16 text-center rounded-card">
         {showImage && (
           <div className="absolute inset-0 z-0 opacity-20">
-            <ImagePlaceholder
-              label={imageLabel}
-              aspectRatio="wide"
-              className="w-full h-full"
-            />
+            {imagePath ? (
+              <Image
+                src={imagePath}
+                alt={imageLabel}
+                fill
+                className="object-cover"
+              />
+            ) : (
+              <ImagePlaceholder
+                label={imageLabel}
+                aspectRatio="wide"
+                className="w-full h-full"
+              />
+            )}
           </div>
         )}
         <div className="relative z-10 max-w-3xl mx-auto">

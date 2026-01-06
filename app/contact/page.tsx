@@ -1,6 +1,4 @@
 import SectionHeader from "@/components/SectionHeader";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
-import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
 
 export default function Contact() {
@@ -14,54 +12,46 @@ export default function Contact() {
       />
 
       {/* Contact Details Section */}
-      <section className="py-section">
-        <div className="max-w-2xl mx-auto mb-12">
-          <h3 className="text-center mb-8">Contact Details</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            <div className="text-center md:text-left">
-              <h4 className="text-lg font-semibold text-charcoal mb-3">Email</h4>
-              <a
-                href="mailto:dan@coreteamwear.co.uk"
-                className="text-lg text-primary hover:text-primary-dark transition-colors duration-200"
-              >
-                dan@coreteamwear.co.uk
-              </a>
-            </div>
-            <div className="text-center md:text-left">
-              <h4 className="text-lg font-semibold text-charcoal mb-3">Phone</h4>
-              <a
-                href="tel:07714242713"
-                className="text-lg text-primary hover:text-primary-dark transition-colors duration-200"
-              >
-                07714 242713
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
       <section className="section-container bg-section-alt">
         <div className="section-container-inner">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
-          {/* Form Side */}
-          <div>
-            <h3 className="mb-6">Send an Enquiry</h3>
-            <ContactForm />
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+            {/* Contact Info Side */}
+            <div className="text-center lg:text-left">
+              <h2 className="mb-8">Get in Touch</h2>
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-xl md:text-2xl font-semibold text-charcoal mb-4">Email</h3>
+                  <a
+                    href="mailto:dan@coreteamwear.co.uk"
+                    className="text-2xl md:text-3xl text-primary hover:text-primary-dark transition-colors duration-200 font-medium"
+                  >
+                    dan@coreteamwear.co.uk
+                  </a>
+                </div>
+                <div>
+                  <h3 className="text-xl md:text-2xl font-semibold text-charcoal mb-4">Phone</h3>
+                  <a
+                    href="tel:07714242713"
+                    className="text-2xl md:text-3xl text-primary hover:text-primary-dark transition-colors duration-200 font-medium"
+                  >
+                    07714 242713
+                  </a>
+                </div>
+              </div>
+            </div>
 
-          {/* Image Side */}
-          <div className="order-first lg:order-last">
-            <div className="relative w-full aspect-square rounded-image overflow-hidden">
-              <Image
-                src="/contact-page.jpg"
-                alt="Contact page"
-                fill
-                className="object-cover"
-              />
+            {/* Image Side */}
+            <div>
+              <div className="relative w-full aspect-square rounded-image overflow-hidden">
+                <Image
+                  src="/contact-page.jpg"
+                  alt="Contact page"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </section>
     </>

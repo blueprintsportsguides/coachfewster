@@ -1,6 +1,6 @@
 import SectionHeader from "@/components/SectionHeader";
 import ServiceDetail from "@/components/ServiceDetail";
-import Button from "@/components/Button";
+import CTABanner from "@/components/CTABanner";
 
 export default function Services() {
   return (
@@ -91,21 +91,16 @@ export default function Services() {
 
       {/* Call to Action */}
       <section className="py-section">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-b from-primary to-primary-dark rounded-card p-8 md:p-12 text-center">
-            <h3 className="text-white mb-4">Ready to Book a Session?</h3>
-            <p className="text-white/90 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-              Get in touch to discuss which service is right for your child and to arrange a session.
-            </p>
-            <Button
-              variant="secondary-white"
-              href="/contact"
-              className="mt-4"
-            >
-              Contact Me
-            </Button>
-          </div>
-        </div>
+        <CTABanner
+          headline="Ready to Book a Session?"
+          subtext="Get in touch to discuss which service is right for your child and to arrange a session."
+          ctaText="Contact Me"
+          ctaHref="/contact"
+          variant="primary"
+          showImage={true}
+          imageLabel="Ready to Book a Session"
+          imagePath="/ready-to-book-session.jpeg"
+        />
       </section>
     </>
   );
