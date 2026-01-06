@@ -15,12 +15,14 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/services", label: "Services" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
-  ];
+          const navLinks = [
+            { href: "/", label: "Home" },
+            { href: "/services", label: "Services" },
+            { href: "/about", label: "About" },
+            { href: "/qualifications", label: "Qualifications" },
+            { href: "/testimonials", label: "Testimonials" },
+            { href: "/contact", label: "Contact" },
+          ];
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">

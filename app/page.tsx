@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import ServiceCard from "@/components/ServiceCard";
 import CTABanner from "@/components/CTABanner";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import Image from "next/image";
 
 export default function Home() {
@@ -108,6 +109,37 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="section-container bg-section-alt">
+        <div className="section-container-inner">
+          <div className="mb-12 md:mb-16">
+            <h2 className="text-center mb-4">What Parents Say</h2>
+            <p className="text-center text-lg md:text-xl text-charcoal-light max-w-2xl mx-auto">
+              Feedback from parents and players about their coaching experience.
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <TestimonialsCarousel
+              testimonials={[
+                {
+                  quote: "Asa played his best 2 games of the season over the last 2 weeks, having started his 1-2-1's with you. The step up was noticed by all.",
+                  author: "Parent"
+                },
+                {
+                  quote: "My son had a 1 day class with the spurs keeper! He said not a patch on Danny F!",
+                  author: "Parent"
+                },
+                {
+                  quote: "I thought it was really good and Eddie enjoyed it which is more important! Thanks Dan!",
+                  author: "Parent"
+                }
+              ]}
+              autoScrollInterval={5000}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action Banner */}
       <section className="py-section">
         <CTABanner
@@ -115,7 +147,6 @@ export default function Home() {
           subtext="Get in touch to discuss the right session for your child."
           ctaText="Contact Me"
           ctaHref="/contact"
-          variant="primary"
           showImage={true}
           imageLabel="CTA banner background"
           imagePath="/cta-banner-background.jpeg"

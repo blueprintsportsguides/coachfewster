@@ -46,60 +46,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section className="py-section">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-center mb-4">Experience</h2>
-          <p className="text-center text-lg md:text-xl text-charcoal-light max-w-2xl mx-auto mb-12">
-            A background in education, coaching, and programme management across schools and sports venues.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            <div className="flex items-start">
-              <span className="text-primary mr-3 mt-1 text-xl">•</span>
-              <p className="text-lg leading-relaxed text-charcoal-light">
-                Deliver PE curriculums across multiple primary and secondary schools.
-              </p>
-            </div>
-            <div className="flex items-start">
-              <span className="text-primary mr-3 mt-1 text-xl">•</span>
-              <p className="text-lg leading-relaxed text-charcoal-light">
-                Lead and manage After School Clubs in a variety of sports.
-              </p>
-            </div>
-            <div className="flex items-start">
-              <span className="text-primary mr-3 mt-1 text-xl">•</span>
-              <p className="text-lg leading-relaxed text-charcoal-light">
-                Senior role overseeing academy operations and venue-managing four centres.
-              </p>
-            </div>
-            <div className="flex items-start">
-              <span className="text-primary mr-3 mt-1 text-xl">•</span>
-              <p className="text-lg leading-relaxed text-charcoal-light">
-                Deliver and lead coach training sessions for staff.
-              </p>
-            </div>
-            <div className="flex items-start">
-              <span className="text-primary mr-3 mt-1 text-xl">•</span>
-              <p className="text-lg leading-relaxed text-charcoal-light">
-                Mentor new coaches to improve session quality and professionalism.
-              </p>
-            </div>
-            <div className="flex items-start">
-              <span className="text-primary mr-3 mt-1 text-xl">•</span>
-              <p className="text-lg leading-relaxed text-charcoal-light">
-                Deliver coaching sessions for youth football players.
-              </p>
-            </div>
-            <div className="flex items-start md:col-span-2">
-              <span className="text-primary mr-3 mt-1 text-xl">•</span>
-              <p className="text-lg leading-relaxed text-charcoal-light">
-                Created and designed an independent football camp during summer holidays.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Coaching Values Section */}
       <section className="section-container bg-section-alt">
         <div className="section-container-inner">
@@ -134,6 +80,55 @@ export default function About() {
             iconPath="/images/icons/Progression.svg"
             iconAlt="Progression icon"
           />
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="py-section">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-12 md:mb-16">
+            <h2 className="text-center mb-4">Experience</h2>
+            <p className="text-center text-lg md:text-xl text-charcoal-light max-w-2xl mx-auto">
+              A background in education, coaching, and programme management across schools and sports venues.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="bg-white rounded-card shadow-card p-6 border-l-4 border-primary">
+              <p className="text-lg leading-relaxed text-charcoal-light">
+                Deliver PE curriculums across multiple primary and secondary schools.
+              </p>
+            </div>
+            <div className="bg-white rounded-card shadow-card p-6 border-l-4 border-primary">
+              <p className="text-lg leading-relaxed text-charcoal-light">
+                Lead and manage After School Clubs in a variety of sports.
+              </p>
+            </div>
+            <div className="bg-white rounded-card shadow-card p-6 border-l-4 border-primary">
+              <p className="text-lg leading-relaxed text-charcoal-light">
+                Senior role overseeing academy operations and venue-managing four centres.
+              </p>
+            </div>
+            <div className="bg-white rounded-card shadow-card p-6 border-l-4 border-primary">
+              <p className="text-lg leading-relaxed text-charcoal-light">
+                Deliver and lead coach training sessions for staff.
+              </p>
+            </div>
+            <div className="bg-white rounded-card shadow-card p-6 border-l-4 border-primary">
+              <p className="text-lg leading-relaxed text-charcoal-light">
+                Mentor new coaches to improve session quality and professionalism.
+              </p>
+            </div>
+            <div className="bg-white rounded-card shadow-card p-6 border-l-4 border-primary">
+              <p className="text-lg leading-relaxed text-charcoal-light">
+                Deliver coaching sessions for youth football players.
+              </p>
+            </div>
+            <div className="bg-white rounded-card shadow-card p-6 border-l-4 border-primary md:col-span-2">
+              <p className="text-lg leading-relaxed text-charcoal-light">
+                Created and designed an independent football camp during summer holidays.
+              </p>
+            </div>
           </div>
         </div>
       </section>
