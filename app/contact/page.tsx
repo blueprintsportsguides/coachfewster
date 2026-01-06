@@ -29,7 +29,7 @@ export default function Contact() {
                   </a>
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-charcoal mb-4">Phone</h3>
+                  <h3 className="text-xl md:text-2xl font-semibold text-charcoal mb-4">WhatsApp</h3>
                   <a
                     href="tel:07714242713"
                     className="text-2xl md:text-3xl text-primary hover:text-primary-dark transition-colors duration-200 font-medium"
